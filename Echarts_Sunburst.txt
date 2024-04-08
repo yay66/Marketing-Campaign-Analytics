@@ -1,0 +1,674 @@
+var data = [
+  {
+    name: 'In a relationship',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 100,
+        children: [
+          {
+            name: 'Low',
+            value: 31
+          },
+          {
+            name: 'Moderate',
+            value: 26,
+          },
+          {
+            name: 'High',
+            value: 24
+          },
+          {
+            name: 'Very High',
+            value: 19
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:120,
+                children: [
+          {
+            name: 'Low',
+            value: 8.5
+          },
+          {
+            name: 'Moderate',
+            value: 36,
+          },
+          {
+            name: 'High',
+            value:48
+          },
+          {
+            name: 'Very High',
+            value: 27
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 110,
+                children: [
+          {
+            name: 'Low',
+            value: 13
+          },
+          {
+            name: 'Moderate',
+            value: 41,
+          },
+          {
+            name: 'High',
+            value: 34
+          },
+          {
+            name: 'Very High',
+            value: 22
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 90,
+                children: [
+          {
+            name: 'Low',
+            value: 28
+          },
+          {
+            name: 'Moderate',
+            value: 24,
+          },
+          {
+            name: 'High',
+            value: 22
+          },
+          {
+            name: 'Very High',
+            value: 16
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:130,
+                children: [
+          {
+            name: 'Low',
+            value: 9
+          },
+          {
+            name: 'Moderate',
+            value: 69,
+          },
+          {
+            name: 'High',
+            value: 29
+          },
+          {
+            name: 'Very High',
+            value: 23
+          }
+        ]
+      }
+    ]
+  },
+    {
+    name: 'Separated',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 30,
+        children: [
+          {
+            name: 'Low',
+            value: 6
+          },
+          {
+            name: 'Moderate',
+            value: 10,
+          },
+          {
+            name: 'High',
+            value: 9
+          },
+          {
+            name: 'Very High',
+            value: 6
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:50,
+                children: [
+          {
+            name: 'Low',
+            value: 4
+          },
+          {
+            name: 'Moderate',
+            value: 14,
+          },
+          {
+            name: 'High',
+            value:21
+          },
+          {
+            name: 'Very High',
+            value: 11
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 40,
+                children: [
+          {
+            name: 'Low',
+            value: 4
+          },
+          {
+            name: 'Moderate',
+            value: 15,
+          },
+          {
+            name: 'High',
+            value: 14
+          },
+          {
+            name: 'Very High',
+            value: 7
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 20,
+                children: [
+          {
+            name: 'Low',
+            value: 20
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:50,
+                children: [
+          {
+            name: 'Low',
+            value: 9
+          },
+          {
+            name: 'Moderate',
+            value: 15,
+          },
+          {
+            name: 'High',
+            value: 15
+          },
+          {
+            name: 'Very High',
+            value: 11
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Single',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 15,
+        children: [
+          {
+            name: 'Low',
+            value: 2.7
+          },
+          {
+            name: 'Moderate',
+            value: 5,
+          },
+          {
+            name: 'High',
+            value: 4.5
+          },
+          {
+            name: 'Very High',
+            value: 2.8
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:35,
+                children: [
+          {
+            name: 'Low',
+            value: 2.5
+          },
+          {
+            name: 'Moderate',
+            value: 10,
+          },
+          {
+            name: 'High',
+            value:14.5
+          },
+          {
+            name: 'Very High',
+            value: 7.9
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 25,
+                children: [
+          {
+            name: 'Low',
+            value: 2.5
+          },
+          {
+            name: 'Moderate',
+            value: 9,
+          },
+          {
+            name: 'High',
+            value:8.6
+          },
+          {
+            name: 'Very High',
+            value: 4.8
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 5,
+                children: [
+          {
+            name: 'Low',
+            value: 5
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:45,
+                children: [
+          {
+            name: 'Low',
+            value: 7.9
+          },
+          {
+            name: 'Moderate',
+            value: 13,
+          },
+          {
+            name: 'High',
+            value: 13
+          },
+          {
+            name: 'Very High',
+            value: 10.5
+          }
+        ]
+      }
+    ]
+  }
+];
+option = {
+  visualMap: {
+    type: 'continuous',
+    min: 0,
+    max: 150,
+    inRange: {
+      color: ['#efd9ce', '#b8d0eb', '#b298dc', '#564592']
+    }
+  },
+  series: {
+    type: 'sunburst',
+    data: data,
+    radius: [0, '90%'],
+    label: {
+      rotate: 'radial'
+    }
+  }
+};
+var data = [
+  {
+    name: 'In a relationship',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 60,
+        children: [
+          {
+            name: 'Low',
+            value: 20
+          },
+          {
+            name: 'Moderate',
+            value: 16,
+          },
+          {
+            name: 'High',
+            value: 14
+          },
+          {
+            name: 'Very High',
+            value: 10
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:110,
+                children: [
+          {
+            name: 'Low',
+            value: 9.5
+          },
+          {
+            name: 'Moderate',
+            value: 32,
+          },
+          {
+            name: 'High',
+            value:44
+          },
+          {
+            name: 'Very High',
+            value: 24
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 90,
+                children: [
+          {
+            name: 'Low',
+            value: 6
+          },
+          {
+            name: 'Moderate',
+            value: 44,
+          },
+          {
+            name: 'High',
+            value: 27
+          },
+          {
+            name: 'Very High',
+            value: 13
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 20,
+                children: [
+          {
+            name: 'Low',
+            value: 18
+          },
+          {
+            name: 'Moderate',
+            value: 2,
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:280,
+                children: [
+          {
+            name: 'Low',
+            value: 48
+          },
+          {
+            name: 'Moderate',
+            value: 82.5,
+          },
+          {
+            name: 'High',
+            value: 82
+          },
+          {
+            name: 'Very High',
+            value: 67
+          }
+        ]
+      }
+    ]
+  },
+    {
+    name: 'Separated',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 30,
+        children: [
+          {
+            name: 'Low',
+            value: 6
+          },
+          {
+            name: 'Moderate',
+            value: 10,
+          },
+          {
+            name: 'High',
+            value: 9
+          },
+          {
+            name: 'Very High',
+            value: 6
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:45,
+                children: [
+          {
+            name: 'Low',
+            value: 3
+          },
+          {
+            name: 'Moderate',
+            value: 13,
+          },
+          {
+            name: 'High',
+            value:20
+          },
+          {
+            name: 'Very High',
+            value: 10
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 40,
+                children: [
+          {
+            name: 'Low',
+            value: 4
+          },
+          {
+            name: 'Moderate',
+            value: 15,
+          },
+          {
+            name: 'High',
+            value: 14
+          },
+          {
+            name: 'Very High',
+            value: 7
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 5,
+                children: [
+          {
+            name: 'Low',
+            value: 5
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:100,
+                children: [
+          {
+            name: 'Low',
+            value: 13
+          },
+          {
+            name: 'Moderate',
+            value: 30,
+          },
+          {
+            name: 'High',
+            value: 30
+          },
+          {
+            name: 'Very High',
+            value: 26.8
+          }
+        ]
+      }
+    ]
+  },
+  {
+    name: 'Single',
+    children: [
+      {
+        name: '2n Cycle',
+        value: 10,
+        children: [
+          {
+            name: 'Low',
+            value: 2.7
+          },
+          {
+            name: 'Moderate',
+            value: 5,
+          },
+          {
+            name: 'High',
+            value: 4.5
+          },
+          {
+            name: 'Very High',
+            value: 2.8
+          }
+        ]
+      },
+      {
+        name: 'PhD',
+        value:25,
+                children: [
+          {
+            name: 'Low',
+            value: 2.5
+          },
+          {
+            name: 'Moderate',
+            value: 10,
+          },
+          {
+            name: 'High',
+            value:14.5
+          },
+          {
+            name: 'Very High',
+            value: 7.9
+          }
+        ]
+      },
+      {
+        name: 'Master',
+        value: 15,
+                children: [
+          {
+            name: 'Low',
+            value: 2.5
+          },
+          {
+            name: 'Moderate',
+            value: 9,
+          },
+          {
+            name: 'High',
+            value:8.6
+          },
+          {
+            name: 'Very High',
+            value: 4.8
+          }
+        ]
+      },
+      {
+        name: 'High School',
+        value: 5,
+                children: [
+          {
+            name: 'Low',
+            value: 5
+          }
+        ]
+      },
+       {
+        name: 'Bachelor',
+        value:60,
+                children: [
+          {
+            name: 'Low',
+            value: 11
+          },
+          {
+            name: 'Moderate',
+            value: 18,
+          },
+          {
+            name: 'High',
+            value: 17
+          },
+          {
+            name: 'Very High',
+            value: 14
+          }
+        ]
+      }
+    ]
+  }
+];
+option = {
+  visualMap: {
+    type: 'continuous',
+    min: 0,
+    max: 150,
+    inRange: {
+      color: ['#efd9ce', '#b8d0eb', '#b298dc', '#564592']
+    }
+  },
+  series: {
+    type: 'sunburst',
+    data: data,
+    radius: [0, '90%'],
+    label: {
+      rotate: 'radial'
+    }
+  }
+};
