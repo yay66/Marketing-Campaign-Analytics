@@ -4,3 +4,6 @@
 - 	Developed and optimized a Linear SVM Prediction Model that enhanced prediction accuracy, showcasing expertise in model selection, parameter tuning by leveraging GridSearchCV to obtain the appropriate parameters and implementation.
 -	Applied Pandas and NumPy packages to extensive data preprocessing, including checking and handling outliers, imputing missing values, simplifying redundant categories, adding new features, creating dummy variables, and applying z-score normalization, dimensionality reduction, ensuring high-quality datasets for modeling. 
 -	Conducted STP and K-Mean clustering to segment users and analyze behaviors. Applied RFM analysis to distinguish high-value and potentially dormant clients. Utilized A/B Testing and ANOVA to assess the effectiveness of marketing campaigns.
+-	Applied A/B testing and ANOVA statistical techniques to analyze marketing campaigns performance and identify optimization opportunities; presented results and recommendations on Power BI dashboards.
+
+
